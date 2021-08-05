@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <title>Product Upload</title>
+        <link rel="stylesheet" href="../css/adminInput.css">       
+</head>
+<body>
+ 
+        <form action="productInput.php" method="post" enctype="multipart/form-data">
+                <label>ID</label>
+                <input type="number" name="pid"><br>
+
+                <label>Name</label>
+                <input type="text" name="pname"><br>
+
+                <label>Price</label>
+                <input type="number" name="pprice"><br>
+
+                <label>Stock</label>
+                <input type="number" name="pstock"><br>
+                
+                <label>Category</label>
+                <input type="text" name="pcat"><br>
+
+                <label>Info</label>
+                <input type="text" name="pinfo" placeholder="Product information"><br>
+
+                <label>Chose photo of your product</label>
+                <input type="file" name="uploadfile" value=""/> <br>
+                <button type="submit" name="upload"> UPLOAD</button>
+        </form>
+
+        <style>
+                /* body {background-color: rgb(43, 59, 61);} */
+
+        </style>
+</body>
+</html>

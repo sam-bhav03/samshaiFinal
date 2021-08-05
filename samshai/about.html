@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="css/about.css">
+    
+</head>
+<body>
+    
+    <div class="about">
+        <div class="inner-section">
+            <h1>About Us</h1>
+            <p class="text">
+                SamShai was founded in 2015 by two pizza lovers and bestfriends, Sambhav and Shaimah.
+                Our chefs and workers operate in a very hygenic place to offer the best dish with the ingrdients used that are freshly received from the market.
+                SamShai is very popular around the island for its italian dishes.           
+            </p>
+            <div id="surprise" class="surprise">
+                <p>Customer Surprise !!!</p>
+                <button class="btn-show" type="button" onclick="loadDoc()">show surprise</button>
+            </div>
+
+            <div class="skills">
+                <button onclick="document.location = 'index.php'">Contact Us</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        function loadDoc() {
+          var xhttp = new XMLHttpRequest();
+          xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+              document.getElementById("surprise").innerHTML =
+              this.responseText;
+            }
+          };
+          xhttp.open("GET", "surprise.txt", true);
+          xhttp.send();
+        }
+    </script>
+
+</body>
+</html>

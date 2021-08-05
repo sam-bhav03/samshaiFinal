@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Website Contact Form</title>
+	<link rel="stylesheet" href="css/contact.css">
+	<script>
+		function _(id){ return document.getElementById(id); }
+		function submitForm(){
+			var x=document.contact.email.value;  
+			var atposition=x.indexOf("@");  
+			var dotposition=x.lastIndexOf(".");  
+			if (atposition<1 || dotposition<atposition+2 || dotposition+2>=x.length){  
+				alert("Please enter a valid e-mail address");  
+				return false;  
+			}else{
+				_("mybtn").disabled = true;
+				_("status").innerHTML = 'please wait ...';
+				var formdata = new FormData();
+				formdata.append( "n", _("n").value );
+				formdata.append( "e", _("e").value );
+				formdata.append( "m", _("m").value );
+				var ajax = new XMLHttpRequest();
+				ajax.open( "POST", "includes/mail_parser.php" );
+				ajax.onreadystatechange = function() {
+					if(ajax.readyState == 4 && ajax.status == 200) {
+						if(ajax.responseText == "success"){
+							alert("Your message has been sent!")
+							_("status").innerHTML = "success"
+							//_("my_form").innerHTML = '<h2 style="color: orange">Thanks '+_("n").value+', your message has been sent.</h2>';
+							
+						} else {
+							_("status").innerHTML = ajax.responseText;
+							_("mybtn").disabled = false;
+						}
+					}
+				}
+				ajax.send( formdata );
+			}
+		}
+	</script>
+</head>
+<body>
+	<div class="contact-form">
+		<h2>Contact Us</h2>
+		<form name="contact" class="contact" id="my_form" onsubmit="submitForm(); return false;">
+			<p><input class="text-box" id="n" placeholder="Name" required></p>
+			<p><input name="email" class="text-box" id="e" placeholder="Email Address" type="email" required></p>
+			<textarea id="m" placeholder="write your message here" rows="10" required></textarea>
+			<p><input class="send-btn" id="mybtn" type="submit" value="Submit Form"> <span id="status"></span></p>
+		</form>
+	</div>
+</body>
+</html>

@@ -1,0 +1,97 @@
+body{
+
+    background-image:  linear-gradient(186deg, rgba(73, 48, 7, 0.7) 10%, rgba(125,68,33,0.7) 46%, rgba(77, 54, 40, 0.85) 80%),url("../images/backgrounds/background-image.jpg");
+    background-size:cover;
+}
+
+.cart{
+    height: 440px;
+    max-height: 1000px;
+    background: #f3c399;
+    border-radius: 10px;
+}
+.cart .header {
+    display: block;
+    font-weight: normal;
+    margin: 0;
+    padding: 40px 0;
+    font-weight: bold;
+    font-size: 28px;
+    text-align: center;
+    width: 100%;
+}
+.cart table {
+    width: 100%;
+}
+.cart table tbody td {
+    padding: 40px 10px;
+    border-bottom: 1px solid #EEEEEE;
+}
+.cart table thead td:last-child {
+    text-align: right;
+}
+.cart table tbody td {
+    padding: 25px 0;
+    border-bottom: 1px solid #EEEEEE;
+}
+.cart table tbody td:last-child {
+    text-align: right;
+}
+.cart table .img {
+    width: 80px;
+}
+
+ 
+.cart table a {
+    text-decoration: none;
+    color: #fdfdfd;
+}
+.cart .subtotal {
+    background-color: #bd8659;
+    border-radius: 3%;
+    width: 20%;
+    font-size: 18px;
+    text-align: center;
+    padding: 30px 10px;
+    margin-right: 20%;
+}
+.cart .subtotal .text {
+    padding-right: 40px;
+    font-size: 28px;
+}
+.cart .subtotal .price {
+    font-size: 28px;
+    color: #000000;
+}
+.cart .buttons {
+    text-align: right;
+    padding-bottom: 120px;
+}
+.cart .buttons input[type="submit"] {
+    margin-left: 10px;
+    padding-bottom: 120px;
+    padding: 10px 20px;
+    border: 0;
+    background: #bd8659;
+    color: #ffffff;
+    font-size: 22px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.cart .buttons input[type="submit"]:hover {
+    background: #209e12;
+}
+.placeorder h1 {
+    display: block;
+    font-weight: normal;
+    margin: 0;
+    padding: 40px 0;
+    font-size: 24px;
+    text-align: center;
+    width: 100%;
+}
+.placeorder p {
+    text-align: center;
+}
+ 

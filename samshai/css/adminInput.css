@@ -1,0 +1,55 @@
+body {
+	background-image:  linear-gradient(186deg, rgba(73, 48, 7, 0.7) 10%, rgba(125,68,33,0.7) 46%, rgba(77, 54, 40, 0.85) 80%),url("../images/backgrounds/background-image.jpg");
+	display: flex;
+	background-size:cover;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	flex-direction: column;
+}
+
+*{
+	font-family: sans-serif;
+	box-sizing: border-box;
+}
+
+form {
+	width: 500px;
+	padding: 30px;
+	border-radius: 15px;
+}
+
+label {
+	color: whitesmoke;
+	font-weight: bolder;
+	font-size: 18px;
+	padding: 10px;
+}
+
+input {
+	background: whitesmoke;
+  	color: black;
+  	border: none;
+	width: 100%;
+	height: 50px;
+	padding: 10px;
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+	margin: 10px auto;
+	border-radius: 5px;
+	font-size: 15px;
+	opacity: 0.5;
+	font-size: large;
+}
+
+button {
+	float: right;
+	background: #555;
+	padding: 10px 15px;
+	color: #fff;
+	border-radius: 5px;
+	margin-right: 10px;
+	border: none;
+}
+button:hover{
+	background-color: black;
+}

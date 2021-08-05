@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>FAQ</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/styleFAQ.css">
+	<!-- for icons plus minus font awesome-->
+	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+  <div class="accordian">
+	  <h1>Frequently asked questions (FAQs)</h1>
+  	  <div class="card">
+  	  	  <div class="card-header">
+  	  	  	 <h3>What are SamShai's specialities?</h3>
+  	  	  	 <span class="fa fa-minus"></span>
+  	  	  </div>
+  	  	  <div class="card-body active">
+  	  	  	  <p>We often get these type of question from customers on especially on their first order.</p><br>
+				<p>Here are some of our specialities:</p><br>
+				<p>1. Fettuccine Alfredo</p><br>
+				<p>2. Garlic butter pasta with garlic chicken</p><br>
+				<p>3. Tomato goat cheese pasta</p>
+  	  	  </div>
+  	  </div>
+
+  	  <div class="card">
+  	  	  <div class="card-header">
+  	  	  	 <h3>How can we contact you?</h3>
+  	  	  	 <span class="fa fa-plus"></span>
+  	  	  </div>
+  	  	  <div class="card-body">
+  	  	  	  <p>Our contact details is available on the website.</p><br>
+				<p>Or else you can direct yourself to the "contact us" page where you'll be provided a form, in which can send us a message.</p><br>
+				<p>Once we receive your message, we can reply you by mail.</p>
+  	  	  </div>
+  	  </div>
+  	  <div class="card">
+  	  	  <div class="card-header">
+  	  	  	 <h3>Do you have a halaal cerfitificate for your dishes?</h3>
+  	  	  	 <span class="fa fa-plus"></span>
+  	  	  </div>
+  	  	  <div class="card-body">
+  	  	  	  <p>Since Mauritius is a multicultural country, often when muslims visit our retaurant they want to make sure if the dishes are halaal.</p><br>
+				<p>We respect all of our customers' choices, so we made sure that we provide them halaal food.</p><br>
+				<p>As proof we also have a halaal cerfitificate.</p>
+  	  	  </div>
+  	  </div>
+  </div>
+
+
+<!-- jqurey code -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<script>
+	$(document).ready(function(){
+	  $(".card-header").click(function(){
+       // self clicking close
+       if($(this).next(".card-body").hasClass("active")){
+         $(this).next(".card-body").removeClass("active").slideUp()
+        $(this).children("span").removeClass("fa-minus").addClass("fa-plus")	
+       }
+     else{
+	   $(".card .card-body").removeClass("active").slideUp()
+	   $(".card .card-header span").removeClass("fa-minus").addClass("fa-plus");
+       $(this).next(".card-body").addClass("active").slideDown()
+        $(this).children("span").removeClass("fa-plus").addClass("fa-minus")
+      }
+	  })
+	})
+
+</script>
+
+
+</body>
+</html>

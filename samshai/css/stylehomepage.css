@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+    /* background-image: linear-gradient(rgba(4,9,30,0.7),rgba(83, 45, 22, 0.555)),url("Images/Logos/background.jpg"); */
+    background-image:  linear-gradient(186deg, rgba(4,9,30,0.7) 10%, rgba(125,68,33,0.7) 46%, rgba(77, 54, 40, 0.85) 80%),url("../images/backgrounds/background.jpg");
+    
+}
+
+.header{
+    min-height: 80vh;
+    width: 100%;
+    position: relative;
+}
+
+.main-stuff{
+    width: 90%;
+    color: rgb(255, 255, 255);
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    /* animation: textup 6s linear infinite;
+    transform: translateY(100px); */
+}
+.main-stuff h1{
+    font-size: 62px;
+}
+.main-stuff p{
+    margin: 80px 0 40px;
+    font-size: 25px;
+    color: #fff;
+    
+}
+.main-stuff a{
+    color: rgb(0, 0, 0);
+}
+.hero-btn{
+    display: inline-block;
+    text-decoration: none;
+    background: #e9e3de;
+    color: rgb(119, 71, 71);
+    border: 3px  solid rgb(211, 133, 32);
+    padding: 12px 34px;
+    font-size: 18px;
+    position: relative;
+    cursor: pointer;
+}
+.hero-btn:hover{
+    border: 3px solid #ffffff;
+    background: #bd6b24;
+    transition: 1s;
+}
+@keyframes textup {
+    10%{
+        transform: translateY(0px);
+    }
+    100%{
+        transform: translate(10px);
+    }
+}
+
+
+
+/* ------- services section ----- */
+/* .services-img{
+    background-image: linear-gradient(rgba(83, 45, 22, 0.555),rgba(4,9,30,0.7)),url("Images/Logos/background.jpg");
+
+} */
+.services{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+.services h1{
+    font-size: 46px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.services .row{
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+.services .col{
+    flex-basis: 31%;
+    background: #b47a47;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    text-align: left;
+    padding: 8px 8px;
+    box-sizing: border-box;
+    transition: 0.3s; 
+}
+.services .col img{
+    width: 100%;
+    border-radius: 10px;
+}
+.services p{
+    color: #fff;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
+}
+.services h3{
+    color: #fff;
+    text-align: center;
+    font-weight: 600;
+}
+.services .col:hover{
+    box-shadow: 0 0 20px 0px rgba(230, 227, 227, 0.2);
+    padding: 10px 8px;
+    
+}
+ 
+@media(max-width: 700px){
+    .row{
+        flex-direction: column;
+    }
+}
